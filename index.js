@@ -2,36 +2,17 @@
 $(document).ready(function() {
   //wait for html
 
-  $(".btn").click(function(){
+  $(".colorChange").click(function(){
     if( $(this).hasClass("color1") ) {
       $(this).removeClass("color1");
       $(this).addClass("color2");
-    }
-
-    if( $(this).hasClass("color2") ) {
-      $(this).removeClass("color2");
+    }else{
       $(this).addClass("color1");
+      $(this).removeClass("color2");
     }
-
-    if( $(this).hasClass("color3") ) {
-      $(this).removeClass("color3");
-      $(this).addClass("color4");
-    }
-
-    if( $(this).hasClass("color4") ) {
-      $(this).removeClass("color4");
-      $(this).addClass("color3");
-    }
-
   });
+  
 });
-
-
-
-
-function colorChange() {
-
-}
 
 
 function mini() {
