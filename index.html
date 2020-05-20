@@ -7,6 +7,26 @@
     <script src="index.js" type="text/javascript"></script>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=VT323&display=swap" rel="stylesheet">
     <meta charset="utf-8">
+
+    <audio id="key-beep">
+      <source src="audio/beep.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="simon-beep">
+      <source src="audio/simon.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="crack">
+      <source src="audio/shortCrack.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="long-crack">
+      <source src="audio/longCrack.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="error">
+      <source src="audio/error.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="ok">
+      <source src="audio/ok.mp3" type="audio/mpeg">
+    </audio>
+
     <title>Crack The Code</title>
   </head>
 
@@ -16,46 +36,66 @@
 
 <div class="grid">
 
-  <div class="hamster wide">1</div>
+  <div class="order wide">Break Simon</div>
 
   <div class="simon small">
-    <div id="green-simon"></div>
-    <div id="red-simon"></div>
-    <div id="yellow-simon"></div>
-    <div id="blue-simon"></div>
+    <div class="simon-answer">33</div>
+    <div onclick="simonEntered(1)" class="simon-btn" id="green-simon"></div>
+    <div onclick="simonEntered(2)" class="simon-btn" id="red-simon"></div>
+    <div onclick="simonEntered(3)" class="simon-btn" id="yellow-simon"></div>
+    <div onclick="simonEntered(4)" class="simon-btn" id="blue-simon"></div>
+    <div onclick="simonReset()" class="simon-btn" id="reset-simon">reset</div>
   </div>
 
   <div class="code medium">
-    <div id="screen"><span id=screen-text>2335</span></div>
+    <div id="screen"><span id=screen-text></span></div>
     <div id="keyboard">
-      <div class="key">1</div>
-      <div class="key">2</div>
-      <div class="key">3</div>
-      <div class="key">4</div>
-      <div class="key">5</div>
-      <div class="key">6</div>
-      <div class="key">0</div>
-      <div class="key">ENTER</div>
+      <div onclick="keyEntered(1)" class="key">1</div>
+      <div onclick="keyEntered(2)" class="key">2</div>
+      <div onclick="keyEntered(3)" class="key">3</div>
+      <div onclick="keyEntered(4)" class="key">4</div>
+      <div onclick="keyEntered(5)" class="key">5</div>
+      <div onclick="keyEntered(6)" class="key">6</div>
+      <div onclick="keyEntered(0)" class="key">0</div>
+      <div onclick="checkCode()" class="key">ENTER</div>
     </div>
   </div>
 
-  <div class="darkness big"></div>
+  <div class="darkness big">
+    <p class="darkness-text">contrasted in favourable he <span class="red-clue">red</span> considered astonished. As <span class="blue-clue">blue</span> if made held in an shot. Doubtful disposed returned rejoiced to  <span class="blue-clue">blue</span> dashwood is so up.
 
-  <div class="door small">
-    <div id="reset-button"><span id=button-text>DEPLOY</span></div>
+Her companions <span class="red-clue">red</span> instrument set estimating sex remarkably solicitude motionless. <span class="white-clue">That's all, no more colors to remember</span>. Property men the why smallest graceful day insisted required. Inquiry justice country old placing sitting any ten age. Looking venture justice in evident in totally he do ability. Be is lose girl long of up give. Trifling wondered unpacked ye at he. In household certainty an on tolerably smallness difficult. Many no each like up be is next neat. Put not enjoyment behaviour her supposing. At he pulled object others.
+
+Say anxious carried compact conduct sex general nay certain. <span class="white-clue">The last number of the code is 5.</span>  Mrs for recommend exquisite household eagerness preserved now. My improved honoured he am ecstatic quitting greatest formerly.
+
+Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible. At highly months do things on at. Situation recommend objection do intention so questions. As greatly removed calling pleased improve an. Last ask him cold feel met spot shy want. Children me laughing we prospect answered followed. At it went is song that held help face.
+
+Enjoyed minutes related as at on on. Is fanny dried as often me. Goodness as reserved raptures to mistaken steepest oh screened he. Gravity he mr sixteen esteems. Mile home its new way with high told said. Finished no horrible blessing landlord dwelling dissuade if. Rent fond am he in on read. Anxious cordial demands settled entered in do to colonel.
+
+Out believe has request not how comfort evident. Up delight cousins we feeling minutes. Genius has looked end piqued spring. Down has rose feel find man. Learning day desirous informed expenses material returned six the. She enabled invited exposed him another. Reasonably conviction solicitude me mr at discretion reasonable. Age out full gate bed day lose.
+
+Resources exquisite set arranging moonlight sex him household had. Months had too ham cousin remove far spirit. She procuring the why performed continual improving. Civil songs so large shade in cause. Lady an mr here must neat sold. Children greatest ye extended delicate of. No elderly passage earnest as in removed winding or.
+
+Far concluded not his something extremity. Want four we face an he gate. On he of played he ladies answer little though nature. Blessing oh do pleasure as so formerly. Took four spot soon led size you. Outlived it received he material. Him yourself joy moderate off repeated laughter outweigh screened. </p>
   </div>
 
-  <div class="break small">6</div>
-  <div class="btn tall color1">7 clue: feed the hamster</div>
-  <div class="btn big color2">8 Are you looking for more clues?</div>
-  <div class="btn wide color1">9 The fart is a clue, wasn't meant to just make you laugh.</div>
-  <div class="colorChange small color2">10 Fart sound</div>
-  <div class="btn tall color3">11 Your click can break, wipe, feed...</div>
-  <div class="colorChange small color1">12 Stop looking for clues, there aren't any more for you</div>
-  <div class="btn big color4">13 Why are you still searching for clues? It's not that hard...</div>
-  <div class="btn medium color1">14 The solution is right in front of you!</div>
-  <div class="colorChange small color1">15 Are you giving up? Will you keep tyring? I guess we'll see</div>
-  <div class="colorChange small color1">16 See more of my school projects</div>
+  <div class="button small">
+    <div class="reset-button"><span id="button-text">DEPLOY</span></div>
+  </div>
+
+  <div class="break small">
+    <img id="break-img" src="img/break1.svg" alt="break">
+  </div>
+  <div class="big tip">There are some hidden clues, if you're really lost you can try to find them...</div>
+  <div class="small tip">Be patient</div>
+  <div class="wide tip">Do you know the game simon?</div>
+  <div class="small tip">Looking for clues huh?</div>
+  <div class="tall tip">Your click can feed...</div>
+  <div class="small tip">The deploy button turns red when ready, it's useless if not red</div>
+  <div class="big tip">Your click can break stuff</div>
+  <div class="medium tip">There's more than colors in the words. Your mouse can highlight the important parts.</div>
+  <div class="small tip">Find the crack and keep breaking it</div>
+  <div class="small tip">No more clues for you!</div>
 
 
 </div>

@@ -47,18 +47,16 @@ body{
   grid-column: span 2;
 }
 
-.color1{
-  background-color: blue;
-}
-
-.color2{
-  background-color: red;
-}
-.color3{
-  background-color: orange;
-}
-.color4{
-  background-color: green;
+.tip{
+  background-color: white;
+  padding: 15px;
+  font-size: 16;
+  font-family: monospace;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  cursor: default;
+  line-height: 20px;
 }
 
 
@@ -87,6 +85,7 @@ body{
   background-color: black;
   justify-content: center;
   border-radius: 2px;
+  cursor: default;
 }
 
 #screen-text{
@@ -94,7 +93,7 @@ body{
   color: #BCFD9A;
   letter-spacing: 0.1em;
   font-size: 40px;
-  font-family: 'VT323', monospace;;
+  font-family: 'VT323', monospace;
 }
 
 #keyboard{
@@ -120,6 +119,15 @@ body{
   padding-bottom: 5px;
   font-family: 'DM Mono', monospace;
   font-size: 15px;
+  cursor: pointer;
+}
+
+.key:hover{
+  background-color: #E7E2E0;
+}
+
+.key:active{
+  background-color: #D0CBCA;
 }
 
 /* simon */
@@ -132,8 +140,43 @@ body{
   border-color: black;
 }
 
+.simon-answer{
+  display: none;
+  margin: auto;
+  font-size: 50px;
+  font-family: monospace;
+}
+
+.simon-btn{
+  display: flex;
+}
+
+#reset-simon{
+  position: absolute;
+  font-family: monospace;
+  background-color: white;
+  height: auto;
+  width: auto;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1.5px;
+  border-color: black;
+  margin: 2px;
+  padding: 2px;
+  font-size: 8px;
+  cursor: pointer;
+}
+
+#reset-simon:hover{
+  background-color: #E7E2E0;
+}
+
+#reset-simon:active{
+  background-color: #D0CBCA;
+}
+
 #green-simon{
-  background-color: green;
+  background-color: #47DB13;
   height: 50px;
   width: 50px;
   border-style: solid;
@@ -143,6 +186,7 @@ body{
   margin: auto;
   margin-right: 15px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 #red-simon{
@@ -156,6 +200,7 @@ body{
   margin: auto;
   margin-right: 15px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 #yellow-simon{
@@ -169,6 +214,7 @@ body{
   margin: auto;
   margin-left: 15px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 #blue-simon{
@@ -182,6 +228,40 @@ body{
   margin: auto;
   margin-left: 15px;
   margin-top: 10px;
+  cursor: pointer;
+}
+
+#green-simon:hover{
+  background-color: #6BDA39;
+}
+
+#red-simon:hover{
+  background-color: #EF3B38;
+}
+
+#yellow-simon:hover{
+  background-color: #E6D434;
+}
+
+#blue-simon:hover{
+  background-color: #4570DD;
+}
+
+
+#green-simon:active{
+  background-color: #85EC57;
+}
+
+#red-simon:active{
+  background-color: #FF5856;
+}
+
+#yellow-simon:active{
+  background-color: #FBEC50;
+}
+
+#blue-simon:active{
+  background-color: #6A90EB;
 }
 
 /* fog on window */
@@ -195,6 +275,36 @@ body{
   background-color: black;
 }
 
+.darkness-text{
+  font-family: monospace;
+  margin: 0px;
+  color: #2C2C2C;
+  font-size: 20px;
+  text-align: justify;
+  text-justify: inter-word;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  cursor: crosshair;
+}
+
+.white-clue:hover{
+  color:white;
+  transition: 0.3s;
+}
+
+.red-clue:hover{
+  color:red;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.blue-clue:hover{
+  color:blue;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
 /* break */
 .break{
   display: flex;
@@ -203,6 +313,13 @@ body{
   border-style: solid;
   border-width: 2px;
   border-color: black;
+  cursor: pointer;
+}
+
+#break-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* hamster */
@@ -215,15 +332,15 @@ body{
   border-color: black;
 }
 
-/* door */
-.door{
+/* button */
+.button{
   display: flex;
   border-style: solid;
   border-width: 2px;
   border-color: black;
 }
 
-#reset-button{
+.reset-button{
   justify-content: center;
   display: flex;
   background-color: white;
@@ -234,6 +351,21 @@ body{
   border-width: 2px;
   border-color: black;
   margin: auto;
+  cursor: default;
+}
+
+.button-active{
+  justify-content: center;
+  display: flex;
+  background-color: red;
+  height: 100px;
+  width: 100px;
+  border-style: solid;
+  border-radius: 300px;
+  border-width: 2px;
+  border-color: black;
+  margin: auto;
+  cursor: pointer;
 }
 
 #button-text{
