@@ -22,11 +22,6 @@ $(document).ready(function() {
 
   $("#break-img").on("click", changeSrc);
 
-  // if (simon.length == 4) {
-  //   checkSimon();
-  //   // run checkSimon and reset array
-  // }
-
 });
 
 function checkSimon() {
@@ -99,16 +94,7 @@ function changeSrc() {
   }
 }
 
-function sky() {
-  //sound of birds
-  //clouds move
-}
-
-function glide() {
-
-}
-
-
-function spin() {
-
+function ping() {
+  $('#rec')[0].play();
+  $("#order-screen-text").text("CRACK, SIMON");
 }

@@ -26,6 +26,9 @@
     <audio id="ok">
       <source src="audio/ok.mp3" type="audio/mpeg">
     </audio>
+    <audio id="rec">
+      <source src="audio/recording.mp3" type="audio/mpeg">
+    </audio>
 
     <title>Crack The Code</title>
   </head>
@@ -36,7 +39,19 @@
 
 <div class="grid">
 
-  <div class="order wide">Break before Simon</div>
+
+  <div class="order wide">
+    <div id="order-screen">
+      <span id=order-screen-text></span>
+    </div>
+    <div class="buttons">
+      <div class="key-order"></div>
+      <div class="key-order"></div>
+      <div class="key-order"></div>
+      <div class="key-order"></div>
+    </div>
+    <div onclick="ping()" id="ping">ping</div>
+  </div>
 
   <div class="simon small">
     <div class="simon-answer">33</div>
