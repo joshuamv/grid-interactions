@@ -193,7 +193,7 @@ body{
 .key{
   display: flex;
   justify-content: center;
-  height: 12%;
+  height: 10%;
   width: 33%;
   border-style: solid;
   border-radius: 10px;
