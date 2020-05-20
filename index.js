@@ -58,7 +58,13 @@ function checkCode() {
     code = ["UNLOCKED"]
     $("#screen-text").text(code.join(""));
     $(".key").prop("onclick", null).off("click");
-    $(".button").addClass(".button-active");
+    $("#button-text").text("GO");
+    $("#button-text").css("color", "white");
+    $("#button-text").css("font-weight", "bold");
+    $("#button-text").css("font-size", "25px");
+    $(".reset-button").css('background-color', 'red');
+    $(".reset-button").css('cursor', 'pointer');
+    $(".reset-button").on("click", go);
     $('#ok')[0].play();
   }else{
     code = [];
@@ -66,6 +72,11 @@ function checkCode() {
     $("#screen-text").text(code.join(""));
     $('#error')[0].play();
   }
+}
+
+function go() {
+  $("#video").show();
+  $('#video').get(0).play()
 }
 
 function keyEntered(number) {
