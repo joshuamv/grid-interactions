@@ -29,8 +29,10 @@ function checkSimon() {
     console.log("okoko");
     $(".simon-btn").hide();
     $(".simon-answer").show();
+    $('#ok')[0].play();
   }else{
     simon = [];
+    $('#error')[0].play();
   }
 }
 
